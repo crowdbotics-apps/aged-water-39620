@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, TouchableHighlight, StyleSheet } from "react-native";
@@ -109,8 +110,11 @@ const styles = StyleSheet.create({
 });
 
 const Button = props => {
+  const navigation = useNavigation();
   return <TouchableHighlight onPress={props.onPress} underlayColor='#DDDDDD'>
-      <Pressable><View style={[btnStyles.button, {
+      <Pressable onPress={() => {
+      navigation.navigate("Login");
+    }}><View style={[btnStyles.button, {
         backgroundColor: props.backgroundColor ? props.backgroundColor : "#000000",
         height: props.height ? props.height : 49,
         borderWidth: props.borderWidth ? props.borderWidth : 0,
