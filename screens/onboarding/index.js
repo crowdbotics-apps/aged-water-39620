@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, TouchableHighlight, StyleSheet } from "react-native";
 const sliderData = [{
@@ -109,16 +110,16 @@ const styles = StyleSheet.create({
 
 const Button = props => {
   return <TouchableHighlight onPress={props.onPress} underlayColor='#DDDDDD'>
-      <View style={[btnStyles.button, {
-      backgroundColor: props.backgroundColor ? props.backgroundColor : "#000000",
-      height: props.height ? props.height : 49,
-      borderWidth: props.borderWidth ? props.borderWidth : 0,
-      borderColor: props.borderColor ? props.borderColor : "#000000"
-    }]}>
+      <Pressable><View style={[btnStyles.button, {
+        backgroundColor: props.backgroundColor ? props.backgroundColor : "#000000",
+        height: props.height ? props.height : 49,
+        borderWidth: props.borderWidth ? props.borderWidth : 0,
+        borderColor: props.borderColor ? props.borderColor : "#000000"
+      }]}>
         <Text style={[btnStyles.text, {
-        color: props.color ? props.color : "#ffffff"
-      }]}>{props.children}</Text>
-      </View>
+          color: props.color ? props.color : "#ffffff"
+        }]}>{props.children}</Text>
+      </View></Pressable>
     </TouchableHighlight>;
 };
 
