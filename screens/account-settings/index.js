@@ -43,10 +43,12 @@ const AccountSettingsScreen = () => {
             <Text style={styles.inputText}>Email Address</Text>
             <TextInput style={styles.input} placeholder="Enter your Email Address" placeholderTextColor="#9B9B9B" autoCapitalize="none" autoCorrect={false} value={email} onChangeText={text => setEmail(text)} />
           </View></Pressable>
-          <View style={styles.nameInput}>
+          <Pressable onPress={() => {
+          navigation.navigate("supportSendFeedback");
+        }}><View style={styles.nameInput}>
             <Text style={styles.inputText}>Card number</Text>
             <TextInput style={styles.input} placeholder="Enter your Card Number" placeholderTextColor="#9B9B9B" autoCapitalize="none" autoCorrect={false} value={cardNumber} onChangeText={text => setCardNumber(text)} />
-          </View>
+          </View></Pressable>
         </View>
         <View style={styles.togglesContainer}>
           <View style={styles.toggle}>
