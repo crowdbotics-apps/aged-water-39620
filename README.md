@@ -65,6 +65,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-zoom-free-calling](modules/zoom-free-calling)
 - [react-native-user-profile](modules/user-profile)
 - [react-native-push-notifications](modules/push-notifications)
+- [camera]()
 
 # Getting started: Frontend
 
