@@ -50,7 +50,9 @@ const Signup = () => {
         </View>
       </View>
       <View style={styles.footerContainer}>
-        <Text style={styles.footerText}>I have an account? </Text>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled12");
+      }}><Text style={styles.footerText}>I have an account? </Text></Pressable>
         <TouchableOpacity onPress={pressed}>
           <Text>Login</Text>
         </TouchableOpacity>
